@@ -1,149 +1,118 @@
 🎵 Featurings et visibilité algorithmique sur YouTube
-📌 Description
+📌 Présentation du projet
 
-Ce projet analyse le rôle des featurings dans le rap français comme levier de visibilité algorithmique sur YouTube.
-À partir d’un web scraping systématique des recommandations YouTube, il vise à mesurer empiriquement si les collaborations entre artistes créent des ponts algorithmiques entre leurs audiences.
+Ce projet vise à analyser l’impact des featurings dans le rap français sur la visibilité algorithmique sur YouTube.
+L’objectif est de comprendre comment les collaborations artistiques influencent les recommandations automatisées et contribuent à la circulation des audiences entre artistes.
 
-🎯 Problématique
+Cette analyse s’inscrit à la croisée de la data analysis, du web scraping et de la sociologie des plateformes.
 
-Le featuring est historiquement une pratique centrale du rap, reposant sur des logiques de reconnaissance artistique, d’authentification professionnelle et de capital symbolique.
-Avec l’essor des plateformes de streaming et des algorithmes de recommandation, se pose une question centrale :
+❓ Problématique
 
-Les featurings sont-ils devenus des outils d’optimisation algorithmique de la visibilité ?
+Les featurings créent-ils des « ponts algorithmiques » mesurables entre les audiences des artistes sur YouTube ?
 
-Ce projet interroge la manière dont les logiques sociales et artistiques du featuring sont reconfigurées par les algorithmes.
+Autrement dit :
+les collaborations augmentent-elles la probabilité qu’un artiste apparaisse dans les recommandations de l’autre ?
 
-🧠 Cadre théorique
+🕸️ Collecte des données (Web Scraping)
 
-L’analyse s’appuie notamment sur les travaux de Corentin Roquebert sur le rap français, qui conceptualise le featuring comme un double échange symbolique :
-
-authentification professionnelle
-
-reconnaissance artistique
-
-L’objectif est d’examiner comment ces mécanismes traditionnels se transforment dans un environnement dominé par les systèmes de recommandation automatisée.
-
-🗂️ Données et méthodologie
-📊 Échantillon
-
-60 collaborations de rap français
-
-30 featurings entre artistes établis (+5M de vues en moyenne)
-
-30 featurings impliquant au moins un artiste émergent (-500k vues)
-
-Pour chaque collaboration :
-
-1 clip solo récent de chaque artiste
-➡️ 180 vidéos analysées
-
-🕸️ Web scraping
+Les données ont été collectées directement depuis YouTube, en navigation anonyme afin de limiter les biais algorithmiques.
 
 Plateforme : YouTube
 
-Données collectées :
+Méthode : navigation anonyme (VPN)
 
-20 recommandations par vidéo
+Recommandations analysées : 20 par vidéo
 
-Navigation :
+Total : 3 600 recommandations
 
-mode anonyme + VPN
+📦 Échantillon
 
-Total :
+60 featurings de rap français
 
-3 600 recommandations collectées
+30 collaborations entre artistes établis
 
-Le scraping vise à limiter les biais liés à l’historique utilisateur et à observer le fonctionnement « brut » de l’algorithme.
+30 collaborations impliquant au moins un artiste émergent
 
-📐 Variable étudiée
+Pour chaque collaboration :
+
+1 clip collaboratif
+
+1 clip solo récent par artiste
+➡️ 180 vidéos analysées
+
+📊 Variables étudiées
 
 Recommandation croisée :
 
-1 = l’artiste collaborateur apparaît dans les recommandations
+1 : l’artiste collaborateur apparaît dans les recommandations
 
-0 = absence de l’artiste collaborateur
+0 : absence de recommandation croisée
 
-📈 Analyse statistique
+📈 Méthodologie d’analyse
 
-L’analyse repose sur :
+Comparaison entre :
 
-comparaison des proportions
+Vidéos solo
 
-test du chi-deux (χ²) pour mesurer la significativité
+Vidéos collaboratives
 
-V de Cramer pour estimer la taille d’effet
+Tests statistiques :
 
-📊 Résultats principaux
-🎤 Artistes établis
+Chi-deux (χ²)
+
+V de Cramer (taille d’effet)
+
+Cette approche permet d’évaluer la significativité statistique des différences observées.
+
+🔍 Résultats principaux
+Artistes établis
 
 Recommandations croisées (solo) : 9,3 %
 
-Recommandations croisées (collaboration) : 35,0 %
+Recommandations croisées (feat) : 35,0 %
 
 +25,7 points
 
-χ² = 179,40 | p < 0,001
+χ² = 179,40 — p < 0,001
 
-Effet fort (V = 0,316)
+V de Cramer = 0,316 (effet fort)
 
-🌱 Artistes émergents
+Artistes émergents
 
 Recommandations croisées (solo) : 8,3 %
 
-Recommandations croisées (collaboration) : 20,2 %
+Recommandations croisées (feat) : 20,2 %
 
 +11,9 points
 
-χ² = 52,95 | p < 0,001
+χ² = 52,95 — p < 0,001
 
-Effet moyen (V = 0,172)
+V de Cramer = 0,172 (effet moyen)
 
-🔍 Interprétation
+✅ Conclusion
 
-Les résultats confirment que :
+Les résultats confirment que les featurings augmentent significativement la visibilité algorithmique sur YouTube.
+Les collaborations agissent comme de véritables leviers de diffusion algorithmique, en particulier pour les artistes déjà établis.
 
-les featurings créent des connexions algorithmiques mesurables
-
-l’effet est plus fort pour les artistes établis
-
-les collaborations multiplient la visibilité croisée :
-
-×4 chez les établis
-
-×2,4 chez les émergents
-
-Ces résultats valident empiriquement l’existence de ponts algorithmiques entre artistes collaborateurs.
+Ce projet met en évidence la manière dont les logiques algorithmiques reconfigurent des pratiques artistiques historiquement fondées sur des réseaux sociaux et symboliques.
 
 ⚠️ Limites
 
-Algorithmes YouTube opaques et évolutifs
+Algorithmes YouTube évolutifs et partiellement opaques
 
-Catégories « établi / émergent » simplificatrices
+Catégorisation « établi / émergent » simplifiée
 
-Analyse non longitudinale
+Analyse transversale (non longitudinale)
 
-Échantillon limité au rap français
+🚀 Pistes d’amélioration
 
-🧩 Enjeux sociologiques
+Étendre l’analyse à d’autres genres musicaux
 
-L’efficacité algorithmique du featuring soulève une tension :
+Ajouter une dimension temporelle
 
-logique artistique et sociale
+Comparer plusieurs plateformes (Spotify, TikTok)
 
-logique d’optimisation de la visibilité
-
-Certains acteurs du milieu dénoncent une instrumentalisation marketing, tandis que d’autres intègrent pleinement ces logiques dans leurs stratégies professionnelles.
-
-🧠 Conclusion
-
-Le featuring demeure une pratique sociale centrale du rap, mais l’environnement algorithmique ajoute une nouvelle dimension :
-
-l’optimisation mesurable de la visibilité
-
-Cette évolution ne supprime pas les logiques traditionnelles, mais les reconfigure.
-L’enjeu pour les artistes réside dans leur capacité à négocier entre créativité, reconnaissance symbolique et performance algorithmique.
-
-🛠️ Outils utilisés
+🛠️ Technologies utilisées
 
 Python
 
@@ -151,4 +120,4 @@ Web scraping
 
 Analyse statistique (χ², V de Cramer)
 
-Analyse sociologique du numérique
+Pandas / NumPy / Matplotlib
